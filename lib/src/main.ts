@@ -12,14 +12,15 @@ export class MSAL implements iMSAL {
         user: { name: '', userName: ''},
         custom: {},
         account: {
-            accountIdentifier: "",
-            homeAccountIdentifier: "",
-            userName: "",
+            localAccountId: "",
+            homeAccountId: "",
+            username: "",
             name: "",
-            idToken: {},
+            // idToken: {},
             idTokenClaims: {},
-            sid: "",
+            // sid: "",
             environment: "",
+            tenantId: ""
         }
     };
     // Config object to be passed to Msal on creation.
