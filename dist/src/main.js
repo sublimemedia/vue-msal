@@ -117,7 +117,7 @@ var MSAL = /** @class */ (function () {
     }
     MSAL.prototype.signIn = function () {
         var _this = this;
-        return this.msalLibrary.loginPopup(this.loginRequest).then(function (loginResponse) {
+        return this.msalLibrary.loginRedirect(this.loginRequest).then(function (loginResponse) {
             if (loginResponse !== null) {
                 _this.data.user.userName = loginResponse.account.username;
                 _this.data.accessToken = loginResponse.accessToken;

@@ -65,7 +65,7 @@ export class MSAL implements iMSAL {
         this.signIn()
     }
     signIn() {
-        return this.msalLibrary.loginPopup(this.loginRequest).then(loginResponse => {
+        return this.msalLibrary.loginRedirect(this.loginRequest).then(loginResponse => {
             if (loginResponse !== null) {
                 this.data.user.userName = loginResponse.account.username;
                 this.data.accessToken = loginResponse.accessToken;
